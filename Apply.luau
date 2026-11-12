@@ -35,7 +35,7 @@ const Actions = { -- every input in one place, rebinding is a one line change
 	ToggleBuild = Enum.KeyCode.B, -- build mode on/off
 }
 
-local function SnapAxis(Value : number, Half : number) : number -- one axis at a time so x, y and z can share it
+const function SnapAxis(Value : number, Half : number) : number -- one axis at a time so x, y and z can share it
 	return math.round((Value - Half) / Config.GridSize) * Config.GridSize + Half -- snaps the edge to the grid then goes back to the center, so blocks line up edge to edge
 end
 
